@@ -1,7 +1,7 @@
 {
-  "private": true,
-  "name": "whale",
-  "version": "1.0.0",
+  "private": false,
+  "name": "whale-design",
+  "version": "0.0.6",
   "scripts": {
     "start": "dumi dev",
     "docs:build": "dumi build",
@@ -11,7 +11,8 @@
     "release": "npm run build && npm publish",
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
     "test": "umi-test",
-    "test:coverage": "umi-test --coverage"
+    "test:coverage": "umi-test --coverage",
+    "pub": "npm publish --access public"
   },
   "main": "dist/index.js",
   "module": "dist/index.esm.js",

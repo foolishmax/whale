@@ -1,8 +1,8 @@
 ---
-title: Input 输入框
+title: Input
 nav:
   path: /components
-  title: 组件
+  title: Components
 ---
 
 ## Input
@@ -11,7 +11,7 @@ Demo:
 
 ```tsx
 import React from 'react';
-import { Input } from 'whale';
+import { Input } from 'whale-design';
 
 export default () => <Input title="First Demo" />;
 ```
