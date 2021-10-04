@@ -2,26 +2,12 @@
 
 ## Getting Started
 
-Install dependencies,
+## Easy play
 
 ```bash
-$ npm i
-```
+// installation dependency
+npm i whale-design --save
 
-Start the dev server,
-
-```bash
-$ npm start
-```
-
-Build documentation,
-
-```bash
-$ npm run docs:build
-```
-
-Build library via `father-build`,
-
-```bash
-$ npm run build
+// using whale
+import { button } from 'whale-design';
 ```

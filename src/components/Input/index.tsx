@@ -1,3 +1,3 @@
-import React from 'react';
+import { Input } from './Input';
 
-export default ({ title }: { title: string }) => <h1>111{title}</h1>;
+export default Input;

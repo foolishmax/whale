@@ -1,1 +1,1 @@
-module.exports = require('./src/components');
+module.exports = require('./src/components/index.ts');

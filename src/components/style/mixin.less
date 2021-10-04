@@ -1,0 +1,24 @@
+// Sizing shortcuts
+
+.size(@width; @height) {
+  width: @width;
+  height: @height;
+}
+
+.square(@size) {
+  .size(@size; @size);
+}
+
+// mixins for clearfix
+// ------------------------
+.clearfix() {
+  &::before {
+    display: table;
+    content: '';
+  }
+  &::after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+}

@@ -7,11 +7,16 @@ nav:
 
 ## Input
 
-Demo:
+<!-- 
+### base
 
+<code src="./demo/base.tsx" /> -->
+
+Demo:
+<!-- 
 ```tsx
 import React from 'react';
 import { Input } from 'whale-design';
 
 export default () => <Input title="First Demo" />;
-```
+``` -->

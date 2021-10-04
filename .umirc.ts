@@ -25,19 +25,33 @@ export default defineConfig({
       {
         title: 'General',
         children: [
-          'components/Button/index.en-US.md',
-          'components/Input/index.en-US.md',
+          'components/button/index.en-US.md',
+          'components/icon/index.en-US.md',
+          'components/input/index.en-US.md',
         ],
       },
+      {
+        title: 'Layout',
+        children: [
+          'components/divider/index.en-US.md',
+        ]
+      }
     ],
     '/zh-CN/components': [
       {
         title: '通用',
         children: [
-          'components/Button/index.zh-CN.md',
-          'components/Input/index.zh-CN.md',
+          'components/button/index.zh-CN.md',
+          'components/icon/index.zh-CN.md',
+          'components/input/index.zh-CN.md',
         ],
       },
+      {
+        title: '布局',
+        children: [
+          'components/divider/index.zh-CN.md',
+        ]
+      }
     ],
   },
 });

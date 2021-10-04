@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "whale-design",
-  "version": "0.0.6",
+  "version": "0.1.18",
   "scripts": {
     "start": "dumi dev",
     "docs:build": "dumi build",
@@ -29,9 +29,15 @@
     ]
   },
   "dependencies": {
+    "@babel/runtime": "^7.15.4",
+    "@rollup/plugin-commonjs": "^21.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.5",
+    "rc-motion": "^2.4.4",
+    "rc-util": "^5.14.0",
     "react": "^16.12.0 || ^17.0.0"
   },
   "devDependencies": {
+    "@rollup/plugin-typescript": "^8.2.5",
     "@umijs/test": "^3.0.5",
     "dumi": "^1.0.17",
     "father-build": "^1.17.2",

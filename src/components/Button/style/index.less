@@ -1,0 +1,116 @@
+@import (reference) '../../style/default.less';
+@import (reference) './mixin.less';
+@import (reference) '../../style/mixin.less';
+
+@btn-prefix-cls: ~'@{whale-prefix}-btn';
+
+.@{btn-prefix-cls} {
+  line-height: @btn-line-height;
+  .btn();
+  .btn-default();
+
+  &-primary {
+    .btn-primary();
+  }
+
+  &-dashed {
+    .btn-dashed();
+  }
+
+  &-link {
+    .btn-link();
+  }
+
+  &-text {
+    .btn-text();
+  }
+
+  // danger as attribute
+  &-dangerous {
+    .btn-danger-default();
+  }
+
+  &-dangerous&-primary {
+    .btn-danger();
+  }
+
+  &-dangerous&-link {
+    .btn-danger-link();
+  }
+
+  &-dangerous&-text {
+    .btn-danger-text();
+  }
+
+  &-round {
+    .btn-round(@btn-prefix-cls);
+  }
+
+  &-circle {
+    .btn-circle(@btn-prefix-cls);
+  }
+
+  &-block {
+    width: 100%;
+  }
+
+  &::before {
+    position: absolute;
+    top: -@btn-border-width;
+    right: -@btn-border-width;
+    bottom: -@btn-border-width;
+    left: -@btn-border-width;
+    z-index: 1;
+    display: none;
+    background: @component-background;
+    border-radius: inherit;
+    opacity: 0.35;
+    transition: opacity 0.2s;
+    content: '';
+    pointer-events: none;
+  }
+
+  &&-loading {
+    position: relative;
+    cursor: default;
+
+    &::before {
+      display: block;
+    }
+  }
+
+  &-icon-only {
+    .btn-square(@btn-prefix-cls);
+    vertical-align: -3px;
+
+    > .@{iconfont-css-prefix} {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  & > &-loading-icon {
+    transition: all 0.3s @ease-in-out;
+
+    .@{iconfont-css-prefix} {
+      padding-right: @padding-xs;
+      animation: none;
+      // for smooth button padding transition
+      svg {
+        animation: loadingCircle 1s infinite linear;
+      }
+    }
+
+    &:only-child {
+      .@{iconfont-css-prefix} {
+        padding-right: 0;
+      }
+    }
+  }
+
+  // To ensure that a space will be placed between character and `Icon`.
+  > .@{iconfont-css-prefix} + span,
+  > span + .@{iconfont-css-prefix} {
+    margin-left: @margin-xs;
+  }
+}
