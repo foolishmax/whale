@@ -1,5 +1,5 @@
 import React from 'react';
-import { tuple, getPrefixCls } from '../util';
+import { tuple, getPrefixCls } from '../_utils';
 import './style/index.ts';
 import classNames from 'classnames';
 import { spaceChildren } from './_utils';

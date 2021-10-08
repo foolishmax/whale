@@ -34,8 +34,13 @@ export default defineConfig({
         title: 'Layout',
         children: [
           'components/divider/index.en-US.md',
-        ]
-      }
+          'components/grid/index.en-US.md',
+        ],
+      },
+      {
+        title: 'Data Entry',
+        children: ['components/switch/index.en-US.md'],
+      },
     ],
     '/zh-CN/components': [
       {
@@ -50,8 +55,13 @@ export default defineConfig({
         title: '布局',
         children: [
           'components/divider/index.zh-CN.md',
-        ]
-      }
+          'components/grid/index.zh-CN.md',
+        ],
+      },
+      {
+        title: '数据录入',
+        children: ['components/switch/index.zh-CN.md'],
+      },
     ],
   },
 });
