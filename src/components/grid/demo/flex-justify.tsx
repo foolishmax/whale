@@ -11,7 +11,7 @@ import { Row, Col, Divider } from 'whale-design';
 
 export default () => {
   return (
-    <div id="components-grid-demo-base">
+    <div id="components-grid-demo-flex-justify">
       <Divider position="left">sub-element align left</Divider>
       <Row justify="start">
         <Col span={4}>col-4</Col>

@@ -11,7 +11,7 @@ import { Row, Col } from 'whale-design';
 
 export default () => {
   return (
-    <div id="components-grid-demo-base">
+    <div id="components-grid-demo-offset">
       <Row>
         <Col span={8}>col-8</Col>
         <Col span={8} offset={8}>

@@ -41,6 +41,10 @@ export default defineConfig({
         title: 'Data Entry',
         children: ['components/switch/index.en-US.md'],
       },
+      {
+        title: 'Data Display',
+        children: ['components/tooltip/index.en-US.md'],
+      },
     ],
     '/zh-CN/components': [
       {
@@ -61,6 +65,10 @@ export default defineConfig({
       {
         title: '数据录入',
         children: ['components/switch/index.zh-CN.md'],
+      },
+      {
+        title: '数据展示',
+        children: ['components/tooltip/index.zh-CN.md'],
       },
     ],
   },

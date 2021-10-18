@@ -11,7 +11,7 @@ import { Row, Col, Divider } from 'whale-design';
 
 export default () => {
   return (
-    <div id="components-grid-demo-base">
+    <div id="components-grid-demo-flex">
       <Divider position="left">Percentage columns</Divider>
       <Row>
         <Col flex={2}>2 / 5</Col>

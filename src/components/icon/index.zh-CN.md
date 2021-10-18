@@ -29,7 +29,7 @@ nav:
 import { createFromIconfontCN } from '@ant-design/icons';
 
 const IconFont = createFromIconfontCN({
-  scriptUrl: '//at.alicdn.com/t/font_2841973_y2pjf0rngd.js', // 在 iconfont.cn 上生成
+  scriptUrl: '//at.alicdn.com/t/font_2841973_nr325vc0hy.js', // 在 iconfont.cn 上生成
 });
 
 ReactDOM.render(<IconFont type="icon-example" />, mountedNode);
@@ -40,10 +40,3 @@ options 的配置项如下：
 | --- | --- | --- | --- |
 | extraCommonProps | 给所有的 `svg` 图标 `<Icon />` 组件设置额外的属性 | { \[key: string]: any } | {} |
 | scriptUrl | [iconfont.cn](http://iconfont.cn/) 项目在线生成的 js 地址 | string \| string\[] | - |
-
-<style>
-[id^="components-icon-demo-"] > .whaleicon {
-  margin-right: 6px;
-  font-size: 24px;
-}
-</style>

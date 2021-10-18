@@ -15,7 +15,7 @@ const DemoBox = (props) => (
 
 export default () => {
   return (
-    <div id="components-grid-demo-base">
+    <div id="components-grid-demo-flex-align">
       <Divider position="left">Align Top</Divider>
       <Row justify="space-around" align="top">
         <Col span={4}>

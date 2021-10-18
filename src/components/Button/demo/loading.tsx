@@ -11,7 +11,7 @@ import { Button } from 'whale-design';
 
 export default () => {
   return (
-    <div id="components-button-demo-size">
+    <div id="components-button-demo-loading">
       <Button type="primary" loading>
         Loading
       </Button>

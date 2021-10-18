@@ -10,7 +10,7 @@ import React from 'react';
 import { createFromIconfontCN } from 'whale-design';
 
 const IconFont = createFromIconfontCN({
-  scriptUrl: ['//at.alicdn.com/t/font_2841973_y2pjf0rngd.js'],
+  scriptUrl: ['//at.alicdn.com/t/font_2841973_nr325vc0hy.js'],
 });
 
 const HeartSvg = () => (
