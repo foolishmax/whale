@@ -1,10 +1,11 @@
 import React from 'react';
-import { tuple, getPrefixCls } from '../_utils';
+import { tuple, getPrefixCls } from '../_util';
 import './style/index.ts';
 import classNames from 'classnames';
 import { spaceChildren } from './_utils';
 import { useState } from 'react';
 import LoadingIcon from './LoadingIcon';
+import Wave from '../_util/wave';
 
 const ButtonTypes = tuple('default', 'primary', 'dashed', 'link', 'text');
 const ButtonHTMLTypes = tuple('submit', 'button', 'reset');
@@ -60,6 +61,7 @@ const InternalButton: React.ForwardRefRenderFunction<unknown, ButtonProps> = (
     shape = 'default',
     block = false,
     loading,
+    className,
     htmlType = 'button' as ButtonProps['htmlType'],
     children,
     ...rest
@@ -107,15 +109,19 @@ const InternalButton: React.ForwardRefRenderFunction<unknown, ButtonProps> = (
 
   const prefixCls = getPrefixCls('btn', customizePrefixCls);
 
-  const classes = classNames(prefixCls, {
-    [`${prefixCls}-${type}`]: type,
-    [`${prefixCls}-dangerous`]: !!danger,
-    [`${prefixCls}-${sizecls}`]: sizecls,
-    [`${prefixCls}-${shape}`]: shape && shape !== 'default',
-    [`${prefixCls}-block`]: block,
-    [`${prefixCls}-loading`]: innerLoading,
-    [`${prefixCls}-icon-only`]: !children && children !== 0 && !!iconType,
-  });
+  const classes = classNames(
+    prefixCls,
+    {
+      [`${prefixCls}-${type}`]: type,
+      [`${prefixCls}-dangerous`]: !!danger,
+      [`${prefixCls}-${sizecls}`]: sizecls,
+      [`${prefixCls}-${shape}`]: shape && shape !== 'default',
+      [`${prefixCls}-block`]: block,
+      [`${prefixCls}-loading`]: innerLoading,
+      [`${prefixCls}-icon-only`]: !children && children !== 0 && !!iconType,
+    },
+    className,
+  );
 
   const iconNode =
     icon && !innerLoading ? (
@@ -150,11 +156,12 @@ const InternalButton: React.ForwardRefRenderFunction<unknown, ButtonProps> = (
     </button>
   );
 
-  return buttonNode;
+  return <Wave disabled={!!innerLoading}>{buttonNode}</Wave>;
 };
 
 const Button = React.forwardRef<unknown, ButtonProps>(InternalButton) as any;
 
 Button.displayName = 'Button';
+Button.__WHALE_BUTTON = true;
 
 export default Button;

@@ -7,7 +7,7 @@ nav:
 
 ## Examples
 
-### Base
+### Basic
 
 <code src="./demo/base.tsx" />
 

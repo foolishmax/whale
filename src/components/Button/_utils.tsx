@@ -1,5 +1,5 @@
 import React from 'react';
-import { cloneElement } from '../_utils/reactNode';
+import { cloneElement } from '../_util/reactNode';
 
 const rxTwoCNChar = /^[\u4e00-\u9fa5]{2}$/;
 const isTwoCNChar = rxTwoCNChar.test.bind(rxTwoCNChar);

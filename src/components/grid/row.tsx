@@ -1,11 +1,11 @@
 import React from 'react';
 import classNames from 'classnames';
-import { getPrefixCls, tuple } from '../_utils';
+import { getPrefixCls, tuple } from '../_util';
 import ResponsiveObserve, {
   Breakpoint,
   responsiveArray,
   ScreenMap,
-} from '../_utils/responsiveObserve';
+} from '../_util/responsiveObserve';
 import useFlexGapSupport from '../_hooks/useFlexGapSupport';
 import './style/index.ts';
 import RowContext from './RowContext';

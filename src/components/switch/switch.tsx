@@ -1,11 +1,11 @@
 import React from 'react';
 import RcSwitch from 'rc-switch';
 import classNames from 'classnames';
-import devWarining from '../_utils/devWarining';
+import devWarining from '../_util/devWarining';
 import './style/index.ts';
 
 import { default as createFromIconfontCN } from '../icon/IconFont';
-import { getPrefixCls } from '../_utils';
+import { getPrefixCls } from '../_util';
 
 const IconFont = createFromIconfontCN({
   scriptUrl: ['//at.alicdn.com/t/font_2841973_nr325vc0hy.js'],
@@ -16,7 +16,9 @@ export type SwitchSize = 'small' | 'default';
 interface CompoundedComponent
   extends React.ForwardRefExoticComponent<
     SwitchProps & React.RefAttributes<HTMLElement>
-  > {}
+  > {
+  __WHALE_SWITCH: boolean;
+}
 export interface SwitchProps {
   prefixCls?: string;
   size?: SwitchSize;
@@ -81,5 +83,6 @@ const Switch = React.forwardRef<unknown, SwitchProps>((props, ref) => {
 }) as CompoundedComponent;
 
 Switch.displayName = 'Switch';
+Switch.__WHALE_SWITCH = true;
 
 export default Switch;

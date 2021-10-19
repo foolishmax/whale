@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import { getPrefixCls } from '../_utils';
+import { getPrefixCls } from '../_util';
 import RowContext from './RowContext';
 
 type TextType = number | string;

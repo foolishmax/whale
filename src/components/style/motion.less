@@ -1,5 +1,71 @@
+.motion-common(@duration: @animation-duration-base) {
+  animation-duration: @duration;
+  animation-fill-mode: both;
+}
+
+.motion-common-leave(@duration: @animation-duration-base) {
+  animation-duration: @duration;
+  animation-fill-mode: both;
+}
+
+.make-motion(@className, @keyframeName, @duration: @animation-duration-base) {
+  .@{className}-enter,
+  .@{className}-appear {
+    .motion-common(@duration);
+
+    animation-play-state: paused;
+  }
+  .@{className}-leave {
+    .motion-common-leave(@duration);
+
+    animation-play-state: paused;
+  }
+  .@{className}-enter.@{className}-enter-active,
+  .@{className}-appear.@{className}-appear-active {
+    animation-name: ~'@{keyframeName}In';
+    animation-play-state: running;
+  }
+  .@{className}-leave.@{className}-leave-active {
+    animation-name: ~'@{keyframeName}Out';
+    animation-play-state: running;
+    pointer-events: none;
+  }
+}
+
+.zoom-motion(@className, @keyframeName, @duration: @animation-duration-base) {
+  @name: ~'@{whale-prefix}-@{className}';
+  .make-motion(@name, @keyframeName, @duration);
+  .@{name}-enter,
+  .@{name}-appear {
+    transform: scale(0); // need this by yiminghe
+    opacity: 0;
+    animation-timing-function: @ease-out-circ;
+
+    &-prepare {
+      transform: none;
+    }
+  }
+  .@{name}-leave {
+    animation-timing-function: @ease-in-out-circ;
+  }
+}
+
+// For Tooltip
+.zoom-motion(zoom-big-fast, whaleZoomBig, @animation-duration-fast);
+
 @keyframes loadingCircle {
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes whaleZoomBigIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
 }

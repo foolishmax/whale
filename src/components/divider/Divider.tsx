@@ -1,6 +1,6 @@
 import * as React from 'react';
 import classNames from 'classnames';
-import { getPrefixCls } from '../_utils';
+import { getPrefixCls } from '../_util';
 import './style/index.ts';
 
 export interface DividerProps {
