@@ -20,3 +20,5 @@ export { default as Switch } from './switch';
 
 export type { TooltipProps } from './tooltip';
 export { default as Tooltip } from './tooltip';
+
+export { default as Affix } from './affix';

@@ -68,7 +68,7 @@ const InternalButton: React.ForwardRefRenderFunction<unknown, ButtonProps> = (
   } = props;
   const buttonRef =
     (ref as any) || React.createRef<HTMLAnchorElement & HTMLButtonElement>();
-  const [innerLoading, setLoading] = useState(!!loading);
+  const [innerLoading] = useState(!!loading);
 
   const handleClick = (
     e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement, MouseEvent>,

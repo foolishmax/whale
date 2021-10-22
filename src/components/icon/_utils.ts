@@ -1,8 +1,6 @@
-import React, { useContext, useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import { updateCSS } from 'rc-util/lib/Dom/dynamicCSS';
 import IconContext from './Context';
-
-
 
 // These props make sure that the SVG behaviours like general text.
 // Reference: https://blog.prototypr.io/align-svg-icons-to-text-and-say-goodbye-to-font-icons-d44b3d7b26b4

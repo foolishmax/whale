@@ -38,6 +38,10 @@ export default defineConfig({
         ],
       },
       {
+        title: 'Navigation',
+        children: ['components/affix/index.en-US.md'],
+      },
+      {
         title: 'Data Entry',
         children: ['components/switch/index.en-US.md'],
       },
@@ -61,6 +65,10 @@ export default defineConfig({
           'components/divider/index.zh-CN.md',
           'components/grid/index.zh-CN.md',
         ],
+      },
+      {
+        title: '导航',
+        children: ['components/affix/index.zh-CN.md'],
       },
       {
         title: '数据录入',

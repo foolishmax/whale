@@ -51,10 +51,7 @@ const LoadingIcon: React.FC<LoadingIconProps> = ({
       onLeaveActive={getCollapsedWidth}
     >
       {(
-        {
-          className,
-          style,
-        }: { className?: string; style?: React.CSSProperties },
+        { style }: { className?: string; style?: React.CSSProperties },
         ref: any,
       ) => (
         <span className={`${prefixCls}-loading-icon`} style={style} ref={ref}>
