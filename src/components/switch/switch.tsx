@@ -8,7 +8,7 @@ import { default as createFromIconfontCN } from '../icon/IconFont';
 import { getPrefixCls } from '../_util';
 
 const IconFont = createFromIconfontCN({
-  scriptUrl: ['//at.alicdn.com/t/font_2841973_nr325vc0hy.js'],
+  scriptUrl: ['//at.alicdn.com/t/font_2841973_v5d3b3ghgw.js'],
 });
 
 export type SwitchSize = 'small' | 'default';

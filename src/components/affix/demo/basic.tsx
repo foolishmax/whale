@@ -10,11 +10,11 @@ import React, { useState } from 'react';
 import { Button, Affix } from 'whale-design';
 
 export default () => {
-  const [top, setTop] = useState(10);
-  const [bottom, setBottom] = useState(10);
+  const [top, setTop] = useState(70);
+  const [bottom, setBottom] = useState(70);
 
   return (
-    <div id="components-button-demo-block">
+    <div id="components-affix-demo-basic">
       <Affix offsetTop={top}>
         <Button type="primary" onClick={() => setTop(top + 10)}>
           Affix top

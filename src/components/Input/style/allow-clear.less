@@ -1,0 +1,43 @@
+@import (reference) '../../style/default.less';
+@input-prefix-cls: ~'@{whale-prefix}-input';
+
+// ========================= Input =========================
+.@{iconfont-css-prefix}.@{whale-prefix}-input-clear-icon {
+  margin: 0;
+  color: @disabled-color;
+  font-size: 20px;
+  vertical-align: -1px;
+  // https://github.com/ant-design/ant-design/pull/18151
+  // https://codesandbox.io/s/wizardly-sun-u10br
+  cursor: pointer;
+  transition: color 0.3s;
+
+  &:hover {
+    color: @text-color-secondary;
+  }
+
+  &:active {
+    color: @text-color;
+  }
+
+  &-hidden {
+    visibility: hidden;
+  }
+
+  &-has-suffix {
+    margin: 0 @input-affix-margin;
+  }
+}
+
+// ======================= TextArea ========================
+.@{whale-prefix}-input-affix-wrapper-textarea-with-clear-btn {
+  padding: 0 !important;
+  border: 0 !important;
+
+  .@{whale-prefix}-input-clear-icon {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 1;
+  }
+}

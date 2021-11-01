@@ -11,6 +11,14 @@ nav:
 
 <code src="./demo/basic.tsx" />
 
+### callback
+
+<code src="./demo/callback.tsx" />
+
+### target
+
+<code src="./demo/target.tsx" />
+
 ## API
 
 | Property     | Description                                        | Type              | Default      |
@@ -23,4 +31,14 @@ nav:
 **Note:** Children of `Affix` must not have the property `position: absolute`,but you can set `position: absolute` on `Affix` itself
 
 <style>
+#components-affix-demo-target .scrollable-container {
+  height: 100px;
+  overflow-y: scroll;
+}
+
+#components-affix-demo-target .background {
+  padding-top: 60px;
+  height: 300px;
+  background-image: url('https://zos.alipayobjects.com/rmsportal/RmjwQiJorKyobvI.jpg');
+}
 </style>

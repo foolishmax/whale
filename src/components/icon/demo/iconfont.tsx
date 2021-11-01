@@ -10,7 +10,7 @@ import React from 'react';
 import { createFromIconfontCN } from 'whale-design';
 
 const IconFont = createFromIconfontCN({
-  scriptUrl: ['//at.alicdn.com/t/font_2841973_nr325vc0hy.js'],
+  scriptUrl: ['//at.alicdn.com/t/font_2841973_v5d3b3ghgw.js'],
 });
 
 const HeartSvg = () => (
@@ -23,9 +23,9 @@ export default () => {
   return (
     <div id="components-icon-demo-iconfont">
       <IconFont type="icon-cry" rotate="90" />
-      <IconFont type="icon-arrow-right-circle" />
-      <IconFont type="icon-fullscreen-expand" />
-      <IconFont type="icon-arrow-left-circle" spin />
+      <IconFont type="icon-loading" />
+      <IconFont type="icon-jingyu" />
+      <IconFont type="icon-eye-close1" spin />
       <IconFont style={{ color: 'hotpink' }}>
         <HeartSvg />
       </IconFont>

@@ -21,4 +21,14 @@ export { default as Switch } from './switch';
 export type { TooltipProps } from './tooltip';
 export { default as Tooltip } from './tooltip';
 
+export type { AffixProps } from './affix';
 export { default as Affix } from './affix';
+
+export type { BackTopProps } from './back-top';
+export { default as BackTop } from './back-top';
+
+export type { SkeletonProps } from './skeleton';
+export { default as Skeleton } from './skeleton';
+
+export type { RadioProps } from './radio';
+export { default as Radio } from './radio';

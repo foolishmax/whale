@@ -10,6 +10,7 @@ import {
   getTargetRect,
   getFixedTop,
   getFixedBottom,
+  removeObserveTarget,
 } from './_utils';
 
 export interface AffixProps {
@@ -75,6 +76,109 @@ class Affix extends React.Component<AffixProps, AffixState> {
     }
   }
 
+  componentDidUpdate(prevProps: AffixProps) {
+    const { prevTarget } = this.state;
+    const targetFunc = this.getTargetFunc();
+    let newTarget = null;
+    if (targetFunc) {
+      newTarget = targetFunc() || null;
+    }
+
+    if (prevTarget !== newTarget) {
+      removeObserveTarget(this);
+      if (newTarget) {
+        addObserveTarget(newTarget, this);
+        // Mock Event object.
+        this.updatePosition();
+      }
+
+      // eslint-disable-next-line react/no-did-update-set-state
+      this.setState({ prevTarget: newTarget });
+    }
+
+    if (
+      prevProps.offsetTop !== this.props.offsetTop ||
+      prevProps.offsetBottom !== this.props.offsetBottom
+    ) {
+      this.updatePosition();
+    }
+
+    this.measure();
+  }
+
+  componentWillUnmount() {
+    clearTimeout(this.timeout);
+    removeObserveTarget(this);
+    (this.updatePosition as any).cancel();
+    // https://github.com/ant-design/ant-design/issues/22683
+    (this.lazyUpdatePosition as any).cancel();
+  }
+
+  measure = () => {
+    const { status, lastAffix } = this.state;
+    const { onChange } = this.props;
+    const targetFunc = this.getTargetFunc();
+    if (
+      status !== AffixStatus.Prepare ||
+      !this.saveFixedNode.current ||
+      !this.placeholderNode.current ||
+      !targetFunc
+    ) {
+      return;
+    }
+
+    const offsetTop = this.getOffsetTop();
+    const offsetBottom = this.getOffsetBottom();
+
+    const targetNode = targetFunc();
+    if (!targetNode) {
+      return;
+    }
+
+    const newState: Partial<AffixState> = {
+      status: AffixStatus.None,
+    };
+    const targetRect = getTargetRect(targetNode);
+    const placeholderRect = getTargetRect(this.placeholderNode.current as any);
+    const fixedTop = getFixedTop(placeholderRect, targetRect, offsetTop);
+    const fixedBottom = getFixedBottom(
+      placeholderRect,
+      targetRect,
+      offsetBottom,
+    );
+
+    if (fixedTop !== undefined) {
+      newState.affixStyle = {
+        position: 'fixed',
+        top: fixedTop,
+        width: placeholderRect.width,
+        height: placeholderRect.height,
+      };
+      newState.placeholderStyle = {
+        width: placeholderRect.width,
+        height: placeholderRect.height,
+      };
+    } else if (fixedBottom !== undefined) {
+      newState.affixStyle = {
+        position: 'fixed',
+        bottom: fixedBottom,
+        width: placeholderRect.width,
+        height: placeholderRect.height,
+      };
+      newState.placeholderStyle = {
+        width: placeholderRect.width,
+        height: placeholderRect.height,
+      };
+    }
+
+    newState.lastAffix = !!newState.affixStyle;
+    if (onChange && lastAffix !== newState.lastAffix) {
+      onChange(newState.lastAffix);
+    }
+
+    this.setState(newState as AffixState);
+  };
+
   getOffsetTop = () => {
     const { offsetBottom } = this.props;
     let { offsetTop } = this.props;
@@ -100,7 +204,7 @@ class Affix extends React.Component<AffixProps, AffixState> {
   };
 
   @throttleByAnimationFrameDecorator()
-  lazyUpdatePositioin() {
+  lazyUpdatePosition() {
     const targetFunc = this.getTargetFunc();
     const { affixStyle } = this.state;
 
@@ -109,9 +213,11 @@ class Affix extends React.Component<AffixProps, AffixState> {
       const offsetBottom = this.getOffsetBottom();
       const targetNode = targetFunc();
 
-      if (targetNode && this.placeholderNode) {
+      if (targetNode && this.placeholderNode.current) {
         const targetRect = getTargetRect(targetNode);
-        const placeholderRect = getTargetRect(this.placeholderNode as any);
+        const placeholderRect = getTargetRect(
+          this.placeholderNode.current as any,
+        );
 
         const fixedTop = getFixedTop(placeholderRect, targetRect, offsetTop);
         const fixedBottom = getFixedBottom(

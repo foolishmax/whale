@@ -26,7 +26,9 @@ export function throttleByAnimationFrameDecorator(): any {
     key: string,
     descriptor: any,
   ) {
-    const { value, initializer } = descriptor!;
+    if (!descriptor) return;
+
+    const { value, initializer } = descriptor;
     const fn = value || initializer;
     let definingProperty = false;
     return {

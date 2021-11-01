@@ -1,0 +1,57 @@
+@import '../../style/default.less';
+@import '../../style/mixin.less';
+@import './mixin.less';
+@import './affix.less';
+@import './allow-clear.less';
+
+@input-prefix-cls: ~'@{whale-prefix}-input';
+
+.@{input-prefix-cls} {
+  .reset-component();
+  .input();
+
+  &-group {
+    .reset-component();
+    .input-group(~'@{input-prefix-cls}');
+
+    &-wrapper {
+      display: inline-block;
+      width: 100%;
+      text-align: start;
+      vertical-align: top;
+    }
+  }
+
+  &-password-icon {
+    color: @text-color-secondary;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      color: @input-icon-hover-color;
+    }
+  }
+
+  &[type='color'] {
+    height: @input-height-base;
+
+    &.@{input-prefix-cls}-lg {
+      height: @input-height-lg;
+    }
+    &.@{input-prefix-cls}-sm {
+      height: @input-height-sm;
+      padding-top: 3px;
+      padding-bottom: 3px;
+    }
+  }
+
+  &-textarea {
+    &-show-count::after {
+      float: right;
+      color: @text-color-secondary;
+      white-space: nowrap;
+      content: attr(data-count);
+      pointer-events: none;
+    }
+  }
+}

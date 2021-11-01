@@ -4,6 +4,7 @@ import { supportRef, composeRef } from 'rc-util/lib/ref';
 import raf from './raf';
 import { cloneElement } from './reactNode';
 import { getPrefixCls } from '.';
+import { CSPConfig, ConfigConsumer } from '../config-provider/context';
 
 let styleForPseudo: HTMLStyleElement | null;
 
@@ -28,18 +29,6 @@ export interface WaveProps {
   insertExtraNode?: boolean;
   disabled?: boolean;
 }
-
-export interface CSPConfig {
-  nonce?: string;
-}
-
-export const ConfigContext = React.createContext<any>({
-  // We provide a default function for Context without provider
-  // getPrefixCls: defaultGetPrefixCls,
-  // renderEmpty: defaultRenderEmpty,
-});
-
-export const ConfigConsumer = ConfigContext.Consumer;
 
 export default class Wave extends React.Component<WaveProps> {
   private instance?: {

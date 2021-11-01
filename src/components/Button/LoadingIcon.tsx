@@ -3,7 +3,7 @@ import CSSMotion from 'rc-motion';
 import { default as createFromIconfontCN } from '../icon/IconFont';
 
 const IconFont = createFromIconfontCN({
-  scriptUrl: ['//at.alicdn.com/t/font_2841973_nr325vc0hy.js'],
+  scriptUrl: ['//at.alicdn.com/t/font_2841973_v5d3b3ghgw.js'],
 });
 
 export interface LoadingIconProps {

@@ -91,3 +91,29 @@ export function addObserveTarget(
     );
   });
 }
+
+export function removeObserveTarget(affix: Affix): void {
+  const observerEntity = observerEntities.find((oriObserverEntity) => {
+    const hasAffix = oriObserverEntity.affixList.some((item) => item === affix);
+    if (hasAffix) {
+      oriObserverEntity.affixList = oriObserverEntity.affixList.filter(
+        (item) => item !== affix,
+      );
+    }
+    return hasAffix;
+  });
+
+  if (observerEntity && observerEntity.affixList.length === 0) {
+    observerEntities = observerEntities.filter(
+      (item) => item !== observerEntity,
+    );
+
+    // Remove listener
+    TRIGGER_EVENTS.forEach((eventName) => {
+      const handler = observerEntity.eventHandlers[eventName];
+      if (handler && handler.remove) {
+        handler.remove();
+      }
+    });
+  }
+}
