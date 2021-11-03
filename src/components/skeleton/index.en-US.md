@@ -1,8 +1,11 @@
 ---
 title: skeleton
 nav:
-  path: /components
-  title: Components
+  title: React
+  path: /react
+group:
+  title: Feedback
+  path: /feedback
 ---
 
 ## Examples

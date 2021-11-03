@@ -1,8 +1,11 @@
 ---
 title: Button 按钮
 nav:
-  path: /components
-  title: 组件
+  title: React
+  path: /react
+group:
+  title: 通用
+  path: /general
 ---
 
 ## 代码演示
@@ -27,11 +30,11 @@ nav:
 
 <code src="./demo/disabled.tsx" />
 
-### Block按钮
+### Block 按钮
 
 <code src="./demo/block.tsx" />
 
-### Loading加载中状态
+### Loading 加载中状态
 
 <code src="./demo/loading.tsx" />
 
@@ -44,7 +47,7 @@ nav:
 通过设置 Button 的属性来产生不同的按钮样式。
 | 属性 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- |
-| block | 按钮宽度调整为其父级元素宽度 | boolean |  false |
+| block | 按钮宽度调整为其父级元素宽度 | boolean | false |
 | danger | 设置危险状态 | boolean | false|
 | disabled | 设置按钮禁用状态 | boolean | false |
 | href | 点击跳转的地址 | string | - |

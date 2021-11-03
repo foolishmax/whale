@@ -1,8 +1,11 @@
 ---
 title: IconFont
 nav:
-  path: /components
-  title: Components
+  title: React
+  path: /react
+group:
+  title: General
+  path: /general
 ---
 
 ## Examples

@@ -1,8 +1,11 @@
 ---
 title: BackTop 回到顶部
 nav:
-  path: /components
-  title: Components
+  title: React
+  path: /react
+group:
+  title: 其他
+  path: /other
 ---
 
 ## Examples

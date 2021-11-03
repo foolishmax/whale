@@ -1,8 +1,11 @@
 ---
 title: BackTop
 nav:
-  path: /components
-  title: Components
+  title: React
+  path: /react
+group:
+  title: Other
+  path: /other
 ---
 
 ## Examples

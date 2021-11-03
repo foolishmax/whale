@@ -1,8 +1,11 @@
 ---
 title: Tooltip 文字提示
 nav:
-  path: /components
-  title: Components
+  title: React
+  path: /react
+group:
+  title: 数据展示
+  path: /display
 ---
 
 ## Examples

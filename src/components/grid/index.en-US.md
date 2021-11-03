@@ -1,8 +1,11 @@
 ---
 title: Grid
 nav:
-  path: /components
-  title: Components
+  title: React
+  path: /react
+group:
+  title: Layout
+  path: /layout
 ---
 
 ## Examples

@@ -1,8 +1,11 @@
 ---
 title: Switch 开关
 nav:
-  path: /components
-  title: Components
+  title: React
+  path: /react
+group:
+  title: 数据录入
+  path: /entry
 ---
 
 ## Examples

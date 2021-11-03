@@ -1,8 +1,11 @@
 ---
 title: Affix 固钉
 nav:
-  path: /components
-  title: Components
+  title: React
+  path: /react
+group:
+  title: 导航
+  path: /navigation
 ---
 
 ## Examples

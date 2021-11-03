@@ -1,8 +1,11 @@
 ---
 title: IconFont 图标
 nav:
-  path: /components
-  title: Components
+  title: React
+  path: /react
+group:
+  title: 通用
+  path: /general
 ---
 
 ## Examples

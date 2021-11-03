@@ -1,8 +1,11 @@
 ---
 title: Divider 分割线
 nav:
-  path: /components
-  title: 组件
+  title: React
+  path: /react
+group:
+  title: 布局
+  path: /layout
 ---
 
 ## 代码演示

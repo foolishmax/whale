@@ -1,8 +1,11 @@
 ---
 title: skeleton 骨架屏
 nav:
-  path: /components
-  title: Components
+  title: React
+  path: /react
+group:
+  title: 反馈
+  path: /feedback
 ---
 
 ## Examples

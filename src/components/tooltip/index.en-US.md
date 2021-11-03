@@ -1,8 +1,11 @@
 ---
 title: Tooltip
 nav:
-  path: /components
-  title: Components
+  title: React
+  path: /react
+group:
+  title: Data Display
+  path: /display
 ---
 
 ## Examples

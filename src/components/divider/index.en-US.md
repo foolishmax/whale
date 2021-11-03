@@ -1,8 +1,11 @@
 ---
 title: Divider
 nav:
-  path: /components
-  title: 组件
+  title: React
+  path: /react
+group:
+  title: Layout
+  path: /layout
 ---
 
 ## 代码演示
@@ -25,12 +28,11 @@ nav:
 
 ## API
 
-
-| Property | Description | Type | Default |
-| --- | --- | --- | --- |
-| className | The className of container | string | - |
-| dashed | Whether line is dashed | boolean | false |
-| position | The position of title inside divider | `left` \| `right` \| `center` | `center` |
-| plain | Divider text show as plain style | boolean | true |
-| style | The style object of container | CSSProperties | - |
-| type | The direction type of divider | `horizontal` \| `vertical` | `horizontal` |
+| Property  | Description                          | Type                          | Default      |
+| --------- | ------------------------------------ | ----------------------------- | ------------ |
+| className | The className of container           | string                        | -            |
+| dashed    | Whether line is dashed               | boolean                       | false        |
+| position  | The position of title inside divider | `left` \| `right` \| `center` | `center`     |
+| plain     | Divider text show as plain style     | boolean                       | true         |
+| style     | The style object of container        | CSSProperties                 | -            |
+| type      | The direction type of divider        | `horizontal` \| `vertical`    | `horizontal` |

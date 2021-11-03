@@ -1,8 +1,11 @@
 ---
 title: Affix
 nav:
-  path: /components
-  title: Components
+  title: React
+  path: /react
+group:
+  title: Navigation
+  path: /navigation
 ---
 
 ## Examples

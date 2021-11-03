@@ -1,8 +1,11 @@
 ---
 title: Input 输入框
 nav:
-  path: /components
-  title: 组件
+  title: React
+  path: /react
+group:
+  title: 数据录入
+  path: /entry
 ---
 
 ## 代码演示
