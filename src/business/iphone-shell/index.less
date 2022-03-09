@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.iphone8-plus {
+  position: relative;
+  width: 460px;
+  height: 736px;
+  padding: 112px 26px;
+  background-color: #d9dbdc;
+  border-radius: 56px;
+  box-shadow: inset 0 0 3px 0 #00000033;
+  transform: scale(0.8);
+  box-sizing: content-box;
+
+  &::before {
+    width: calc(100% - 12px);
+    height: calc(100% - 12px);
+    position: absolute;
+    content: '';
+    top: 6px;
+    left: 6px;
+    border-radius: 50px;
+    background-color: #f8f8f8;
+    z-index: 1;
+  }
+
+  &::after {
+    width: calc(100% - 16px);
+    height: calc(100% - 16px);
+    position: absolute;
+    content: '';
+    top: 8px;
+    left: 8px;
+    border-radius: 48px;
+    box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.2);
+    z-index: 2;
+  }
+
+  .top-bar {
+    position: absolute;
+    top: 68px;
+    left: 0;
+    width: 100%;
+    height: 14px;
+    background-color: #bfbfc0;
+  }
+
+  .volume {
+    position: absolute;
+    left: -4px;
+    top: 188px;
+    height: 66px;
+    width: 4px;
+    border-radius: 2px 0px 0px 2px;
+    background-color: #d9dbdc;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: -78px;
+      left: 2px;
+      width: 2px;
+      height: 40px;
+      border-radius: 2px 0px 0px 2px;
+      background-color: inherit;
+    }
+
+    &::after {
+      display: block;
+      position: absolute;
+      content: '';
+      left: 0px;
+      top: 82px;
+      width: 4px;
+      height: 66px;
+      border-radius: 2px 0px 0px 2px;
+      background: inherit;
+    }
+  }
+
+  .sleep {
+    position: absolute;
+    top: 190px;
+    right: -4px;
+    width: 4px;
+    height: 66px;
+    border-radius: 0 2px 2px 0;
+    background-color: #d9dbdc;
+  }
+
+  .camera {
+    position: absolute;
+    top: 29px;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    margin-left: -6px;
+    border-radius: 50%;
+    background-color: #3c3d3d;
+    z-index: 3;
+  }
+
+  .sensor {
+    position: absolute;
+    top: 54px;
+    left: 154px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #3c3d3d;
+    z-index: 3;
+  }
+
+  .speaker {
+    position: absolute;
+    top: 59px;
+    left: 50%;
+    width: 70px;
+    height: 6px;
+    margin-left: -35px;
+    border-radius: 3px;
+    background-color: #292728;
+    z-index: 3;
+  }
+
+  .screen {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 1px;
+    z-index: 3;
+    box-shadow: 0 0 0 3px #111;
+  }
+
+  .home {
+    position: absolute;
+    left: 50%;
+    bottom: 24px;
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    margin-left: -34px;
+    background: linear-gradient(
+      135deg,
+      #303233 0%,
+      #b5b7b9 50%,
+      #f0f2f2 69%,
+      #303233 100%
+    );
+    z-index: 3;
+
+    &::before {
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      content: '';
+      width: calc(100% - 8px);
+      height: calc(100% - 8px);
+      border-radius: 50%;
+      background-color: #f8f8f8;
+    }
+  }
+
+  .bottom-bar {
+    position: absolute;
+    bottom: 68px;
+    left: 0;
+    width: 100%;
+    height: 14px;
+    background-color: #bfbfc0;
+  }
+}
